@@ -1,0 +1,32 @@
+:root {
+  --asphalt: #0b1f33;
+  --harbor: #123e63;
+  --machine: #f2b705;
+  --stripe: #ffd447;
+  --chalk: #f7f8f6;
+  --rust: #9c4d24;
+}
+
+html { color-scheme: light; }
+body { background: var(--asphalt); color: white; font-family: Inter, sans-serif; }
+.font-display { font-family: 'Barlow Condensed', sans-serif; }
+.page-shell { width: min(100% - 2rem, 78rem); margin-inline: auto; }
+.brand-mark { position: relative; width: 2.65rem; height: 2.65rem; flex: none; }
+.brand-mark::before,
+.brand-mark::after { content: ''; position: absolute; }
+.brand-mark::before {
+  inset: 0; background: var(--machine);
+  clip-path: polygon(0 64%, 63% 0, 100% 0, 100% 34%, 34% 100%, 0 100%);
+}
+.brand-mark::after { width: 55%; height: 16%; right: 0; bottom: 15%; background: var(--asphalt); }
+.signal-field {
+  background-color: var(--machine);
+  background-image: repeating-linear-gradient(135deg, rgba(11,31,51,.075) 0, rgba(11,31,51,.075) 1px, transparent 1px, transparent 12px);
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 93% 100%, 0 100%);
+}
+a:focus-visible { outline: 3px solid var(--stripe); outline-offset: 4px; }
+::selection { background: var(--machine); color: var(--asphalt); }
+
+@media (max-width: 767px) {
+  .signal-field { clip-path: polygon(0 0, 100% 0, 100% 94%, 86% 100%, 0 100%); }
+}

@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benjamin James Construction & Equipment Rental | Saint Lucia</title>
+  <meta name="description" content="Equipment rental, trucking, heavy machinery moving and civil works across Saint Lucia. Call Benjamin James Construction in Dennery for a quote.">
+  <meta name="theme-color" content="#0b1f33">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Benjamin James Construction & Equipment Rental">
+  <meta property="og:description" content="Reliable heavy equipment and civil works, island-wide in Saint Lucia.">
+  <meta property="og:image" content="https://images.pexels.com/photos/14452156/pexels-photo-14452156.jpeg?auto=compress&cs=tinysrgb&w=1600">
+  <meta property="og:locale" content="en_LC">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Barlow Condensed', 'sans-serif']
+          },
+          colors: {
+            asphalt: '#0b1f33',
+            harbor: '#123e63',
+            machine: '#f2b705',
+            stripe: '#ffd447',
+            concrete: '#e8edf0',
+            chalk: '#f7f8f6',
+            rust: '#9c4d24'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --asphalt: #0b1f33;
+      --harbor: #123e63;
+      --machine: #f2b705;
+      --stripe: #ffd447;
+      --concrete: #e8edf0;
+      --chalk: #f7f8f6;
+      --rust: #9c4d24;
+      --ink: #14212c;
+      --motion: 220ms;
+    }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body { background: var(--chalk); color: var(--ink); font-family: Inter, sans-serif; }
+    body.menu-open { overflow: hidden; }
+    ::selection { background: var(--machine); color: var(--asphalt); }
+
+    .font-display { font-family: 'Barlow Condensed', sans-serif; }
+    .balanced { text-wrap: balance; }
+    .section-shell { width: min(100% - 2rem, 78rem); margin-inline: auto; }
+    .focusable:focus-visible,
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid var(--stripe);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      left: 1rem;
+      top: -5rem;
+      z-index: 1000;
+      background: var(--machine);
+      color: var(--asphalt);
+      padding: .8rem 1rem;
+      font-weight: 700;
+      transition: top var(--motion) ease;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    .brand-mark { position: relative; width: 2.65rem; height: 2.65rem; flex: none; }
+    .brand-mark::before,
+    .brand-mark::after { content: ''; position: absolute; }
+    .brand-mark::before {
+      inset: 0;
+      background: var(--machine);
+      clip-path: polygon(0 64%, 63% 0, 100% 0, 100% 34%, 34% 100%, 0 100%);
+    }
+    .brand-mark::after {
+      width: 55%; height: 16%; right: 0; bottom: 15%;
+      background: var(--asphalt);
+    }
+
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: ''; position: absolute; left: 0; bottom: -.4rem; width: 100%; height: 2px;
+      background: var(--machine); transform: scaleX(0); transform-origin: left;
+      transition: transform var(--motion) ease;
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after { transform: scaleX(1); }
+
+    .hero-grid { min-height: calc(100svh - 80px); }
+    .hero-photo {
+      background-image: linear-gradient(180deg, rgba(11,31,51,.06), rgba(11,31,51,.42)),
+        url('https://images.pexels.com/photos/14452156/pexels-photo-14452156.jpeg?auto=compress&cs=tinysrgb&w=1800');
+      background-position: center;
+      background-size: cover;
+    }
+    .hero-photo::after {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(90deg, var(--asphalt) 0, rgba(11,31,51,.64) 10%, transparent 35%);
+    }
+    .hero-title { font-size: clamp(4.4rem, 9vw, 9.4rem); line-height: .78; letter-spacing: -.045em; }
+    .hero-rule { width: clamp(6rem, 15vw, 13rem); height: .6rem; background: var(--machine); }
+
+    .yellow-cut {
+      background: var(--machine);
+      clip-path: polygon(0 0, 100% 0, 100% 84%, 92% 100%, 0 100%);
+    }
+    .diagonal-grid {
+      background-image: repeating-linear-gradient(135deg, rgba(11,31,51,.07) 0, rgba(11,31,51,.07) 1px, transparent 1px, transparent 12px);
+    }
+    .topo-lines {
+      background-image:
+        radial-gradient(circle at 20% 30%, transparent 0 44px, rgba(255,255,255,.07) 45px 46px, transparent 47px 64px, rgba(255,255,255,.05) 65px 66px, transparent 67px),
+        radial-gradient(circle at 80% 70%, transparent 0 70px, rgba(255,255,255,.06) 71px 72px, transparent 73px 90px, rgba(255,255,255,.04) 91px 92px, transparent 93px);
+    }
+
+    .service-row { transition: background-color var(--motion) ease, color var(--motion) ease; }
+    .service-row .service-icon { transition: transform var(--motion) ease, color var(--motion) ease; }
+    .service-row:hover { background: var(--asphalt); color: white; }
+    .service-row:hover .service-icon { transform: translateX(.35rem); color: var(--machine); }
+
+    .photo-one {
+      background-image: linear-gradient(rgba(11,31,51,.08), rgba(11,31,51,.34)),
+        url('https://images.pexels.com/photos/20296265/pexels-photo-20296265/free-photo-of-excavator-at-construction-site.jpeg?auto=compress&cs=tinysrgb&w=1200');
+    }
+    .photo-two {
+      background-image: linear-gradient(rgba(11,31,51,.12), rgba(11,31,51,.38)),
+        url('https://images.pexels.com/photos/14452156/pexels-photo-14452156.jpeg?auto=compress&cs=tinysrgb&w=1200');
+    }
+    .gallery-photo { background-position: center; background-size: cover; }
+
+    .form-control {
+      width: 100%; min-height: 3.25rem; border: 1px solid #82909a; background: white;
+      padding: .8rem .9rem; border-radius: 0; color: var(--ink);
+    }
+    .form-control:hover { border-color: var(--asphalt); }
+    .form-control[aria-invalid="true"] { border: 2px solid #b42318; }
+    .field-error { min-height: 1.25rem; color: #b42318; font-size: .8rem; margin-top: .25rem; }
+
+    @media (max-width: 767px) {
+      .hero-grid { min-height: auto; }
+      .hero-photo::after { background: linear-gradient(0deg, var(--asphalt) 0, rgba(11,31,51,.4) 30%, transparent 62%); }
+      .yellow-cut { clip-path: polygon(0 0, 100% 0, 100% 94%, 88% 100%, 0 100%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Benjamin James Construction & Equipment Rental",
+    "telephone": ["+17587198180", "+17587328142"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dennery",
+      "addressCountry": "LC"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Saint Lucia"
+    },
+    "description": "Civil works contractor and heavy equipment rental company serving Saint Lucia.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Construction and equipment services",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Heavy equipment rental"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Trucking services"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Heavy machinery moving"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Civil works"}}
+      ]
+    }
+  }
+  </script>
+</head>
+
+<body class="antialiased overflow-x-hidden">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-chalk/95 backdrop-blur-sm" aria-label="Site header">
+    <div class="section-shell flex h-20 items-center justify-between gap-6">
+      <a href="#home" class="flex min-w-0 items-center gap-3" aria-label="Benjamin James Construction home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="min-w-0 leading-none">
+          <span class="font-display block truncate text-[1.32rem] font-black tracking-[-.02em] text-asphalt sm:text-[1.55rem]">BENJAMIN JAMES</span>
+          <span class="mt-1 hidden text-[.58rem] font-bold tracking-[.19em] text-harbor min-[420px]:block">CONSTRUCTION &amp; EQUIPMENT RENTAL</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-6 text-sm font-semibold lg:flex" aria-label="Primary navigation">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#equipment">Equipment</a>
+        <a class="nav-link" href="gallery.html">Gallery</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+
+      <div class="hidden border-l-4 border-machine bg-asphalt px-4 py-2 text-white md:grid">
+        <span class="text-[.62rem] font-semibold uppercase tracking-[.14em] text-white/60">Call either line</span>
+        <div class="mt-1 flex gap-4 text-xs font-bold xl:text-sm">
+          <a href="tel:+17587198180" class="whitespace-nowrap hover:text-machine">719-8180</a>
+          <a href="tel:+17587328142" class="whitespace-nowrap hover:text-machine">732-8142</a>
+        </div>
+      </div>
+
+      <button id="menuButton" class="flex h-12 w-12 cursor-pointer items-center justify-center border border-asphalt text-asphalt transition-colors hover:bg-asphalt hover:text-white lg:hidden" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation menu">
+        <i id="menuIcon" class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="fixed inset-x-0 top-20 hidden min-h-[calc(100dvh-5rem)] bg-asphalt text-white" aria-hidden="true">
+      <nav class="section-shell flex flex-col py-8" aria-label="Mobile navigation">
+        <a class="mobile-link border-b border-white/15 py-5 font-display text-4xl font-bold" href="#about">About</a>
+        <a class="mobile-link border-b border-white/15 py-5 font-display text-4xl font-bold" href="#services">Services</a>
+        <a class="mobile-link border-b border-white/15 py-5 font-display text-4xl font-bold" href="#equipment">Equipment</a>
+        <a class="mobile-link border-b border-white/15 py-5 font-display text-4xl font-bold" href="gallery.html">Gallery</a>
+        <a class="mobile-link border-b border-white/15 py-5 font-display text-4xl font-bold" href="#contact">Contact</a>
+        <div class="mt-8 grid gap-3">
+          <a href="tel:+17587198180" class="inline-flex min-h-14 items-center justify-center gap-3 bg-machine px-6 font-bold text-asphalt">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i> Call (758) 719-8180
+          </a>
+          <a href="tel:+17587328142" class="inline-flex min-h-14 items-center justify-center gap-3 border border-white/40 px-6 font-bold text-white">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i> Call (758) 732-8142
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="relative bg-asphalt text-white" aria-labelledby="hero-title">
+      <div class="hero-grid grid md:grid-cols-[54%_46%]">
+        <div class="relative z-10 flex items-center px-4 py-20 sm:px-8 md:py-16 lg:px-[max(4rem,calc((100vw-78rem)/2))] lg:pr-12">
+          <div class="max-w-[46rem]">
+            <div class="mb-7 flex items-center gap-4 text-sm font-semibold text-white/75">
+              <span class="h-px w-12 bg-machine" aria-hidden="true"></span>
+              <span>Dennery, Saint Lucia</span>
+            </div>
+            <h1 id="hero-title" class="hero-title font-display font-black uppercase">
+              The right<br>machine.<br>The right crew.
+            </h1>
+            <div class="hero-rule mt-8" aria-hidden="true"></div>
+            <p class="mt-8 max-w-xl text-lg leading-8 text-white/80 sm:text-xl">Equipment rental, trucking and civil works delivered island-wide—from land clearing to heavy machinery transport.</p>
+            <div class="mt-10 flex flex-col gap-3 min-[430px]:flex-row">
+              <a href="tel:+17587198180" class="inline-flex min-h-14 items-center justify-center gap-3 bg-machine px-7 font-bold text-asphalt transition-colors hover:bg-stripe active:bg-white">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i> Call for a quote
+              </a>
+              <a href="#services" class="inline-flex min-h-14 items-center justify-center gap-3 border border-white/50 px-7 font-bold text-white transition-colors hover:border-white hover:bg-white hover:text-asphalt">
+                View services <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-photo relative min-h-[26rem] overflow-hidden md:min-h-full" role="img" aria-label="Yellow excavator working on an open construction site">
+          <div class="absolute bottom-0 right-0 z-10 w-[78%] max-w-md bg-machine p-5 text-asphalt sm:p-7 md:w-[86%]">
+            <div class="flex items-end justify-between gap-4">
+              <p class="font-display text-3xl font-black leading-none sm:text-4xl">ISLAND-WIDE<br>SERVICE</p>
+              <i class="fa-solid fa-location-dot text-3xl" aria-hidden="true"></i>
+            </div>
+            <p class="mt-3 max-w-sm text-sm font-medium leading-6">Based in Dennery. Working wherever your project takes us in Saint Lucia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-asphalt/15 bg-white" aria-label="Core capabilities">
+      <div class="section-shell grid grid-cols-2 divide-x divide-y divide-asphalt/15 md:grid-cols-4 md:divide-y-0">
+        <div class="p-5 sm:p-7">
+          <i class="fa-solid fa-person-digging text-xl text-rust" aria-hidden="true"></i>
+          <p class="mt-3 font-display text-xl font-bold uppercase leading-tight text-asphalt">Civil works</p>
+        </div>
+        <div class="p-5 sm:p-7">
+          <i class="fa-solid fa-truck-moving text-xl text-rust" aria-hidden="true"></i>
+          <p class="mt-3 font-display text-xl font-bold uppercase leading-tight text-asphalt">Trucking</p>
+        </div>
+        <div class="p-5 sm:p-7">
+          <i class="fa-solid fa-trailer text-xl text-rust" aria-hidden="true"></i>
+          <p class="mt-3 font-display text-xl font-bold uppercase leading-tight text-asphalt">Machine moving</p>
+        </div>
+        <div class="p-5 sm:p-7">
+          <i class="fa-solid fa-screwdriver-wrench text-xl text-rust" aria-hidden="true"></i>
+          <p class="mt-3 font-display text-xl font-bold uppercase leading-tight text-asphalt">Equipment rental</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="bg-chalk py-20 sm:py-28">
+      <div class="section-shell grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-24">
+        <div class="reveal">
+          <p class="font-display text-2xl font-bold text-rust">Built for the work beneath everything else.</p>
+          <div class="mt-5 h-2 w-24 bg-machine" aria-hidden="true"></div>
+          <figure class="mt-8 max-w-sm border-b-8 border-machine bg-asphalt p-2">
+            <img class="aspect-[4/3] w-full object-cover" src="https://images.pexels.com/photos/20296265/pexels-photo-20296265/free-photo-of-excavator-at-construction-site.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" srcset="https://images.pexels.com/photos/20296265/pexels-photo-20296265/free-photo-of-excavator-at-construction-site.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=420 420w, https://images.pexels.com/photos/20296265/pexels-photo-20296265/free-photo-of-excavator-at-construction-site.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700 700w" sizes="(max-width: 1023px) 100vw, 360px" width="700" height="525" loading="lazy" alt="Excavator operating on an active construction site">
+            <figcaption class="flex items-center justify-between gap-4 px-2 py-3 text-xs font-semibold text-white"><span>Site capability</span><span class="text-machine">Saint Lucia</span></figcaption>
+          </figure>
+        </div>
+        <div class="reveal">
+          <h2 class="balanced font-display text-5xl font-black uppercase leading-[.94] tracking-[-.025em] text-asphalt sm:text-7xl">Groundwork that keeps Saint Lucia moving.</h2>
+          <div class="mt-10 grid gap-8 border-t border-asphalt/25 pt-8 md:grid-cols-2">
+            <p class="text-base leading-7 text-slate-700">Benjamin James Construction &amp; Equipment Rental supports contractors, developers, public works and property owners with the machines, transport and practical site support needed to move a job forward.</p>
+            <p class="text-base leading-7 text-slate-700">From Dennery, we serve projects across the island. Our focus is civil infrastructure and heavy equipment—not residential house building.</p>
+          </div>
+          <a href="#contact" class="mt-9 inline-flex min-h-12 items-center gap-3 border-b-2 border-asphalt pb-1 font-bold text-asphalt transition-colors hover:border-rust hover:text-rust">Tell us what the site needs <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="bg-white py-20 sm:py-28" aria-labelledby="services-title">
+      <div class="section-shell">
+        <div class="grid gap-8 border-b-2 border-asphalt pb-10 md:grid-cols-[1fr_auto] md:items-end">
+          <div>
+            <h2 id="services-title" class="font-display text-6xl font-black uppercase leading-none tracking-[-.03em] text-asphalt sm:text-8xl">What we handle</h2>
+          </div>
+          <p class="max-w-sm text-base leading-7 text-slate-600 md:text-right">Four practical service lines. One direct number to plan the job.</p>
+        </div>
+
+        <div class="divide-y divide-asphalt/20">
+          <article class="service-row grid gap-5 px-1 py-9 sm:px-6 md:grid-cols-[4rem_1fr_1.1fr_auto] md:items-center md:gap-8">
+            <span class="font-display text-2xl font-bold text-rust">01</span>
+            <h3 class="font-display text-4xl font-black uppercase leading-none sm:text-5xl"><a class="hover:text-machine" href="services/equipment-rental.html">Equipment rental</a></h3>
+            <p class="max-w-lg leading-7 opacity-75">Large and small excavators, a double-drum mini roller, 20-ton truck, and lowboy transport—subject to availability.</p>
+            <a href="services/equipment-rental.html" class="service-icon flex h-12 w-12 items-center justify-center border border-current" aria-label="Open equipment rental service page"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="service-row grid gap-5 px-1 py-9 sm:px-6 md:grid-cols-[4rem_1fr_1.1fr_auto] md:items-center md:gap-8">
+            <span class="font-display text-2xl font-bold text-rust">02</span>
+            <h3 class="font-display text-4xl font-black uppercase leading-none sm:text-5xl"><a class="hover:text-machine" href="services/trucking-services.html">Trucking services</a></h3>
+            <p class="max-w-lg leading-7 opacity-75">Hauling aggregate, materials, spoil and equipment between suppliers, sites and disposal points across Saint Lucia.</p>
+            <a href="services/trucking-services.html" class="service-icon flex h-12 w-12 items-center justify-center border border-current" aria-label="Open trucking services page"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="service-row grid gap-5 px-1 py-9 sm:px-6 md:grid-cols-[4rem_1fr_1.1fr_auto] md:items-center md:gap-8">
+            <span class="font-display text-2xl font-bold text-rust">03</span>
+            <h3 class="font-display text-4xl font-black uppercase leading-none sm:text-5xl"><a class="hover:text-machine" href="services/heavy-machinery-moving.html">Heavy machinery moving</a></h3>
+            <p class="max-w-lg leading-7 opacity-75">Planned transport and relocation for our equipment or yours, using a trailer head and lowboy.</p>
+            <a href="services/heavy-machinery-moving.html" class="service-icon flex h-12 w-12 items-center justify-center border border-current" aria-label="Open heavy machinery moving service page"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="service-row grid gap-5 px-1 py-9 sm:px-6 md:grid-cols-[4rem_1fr_1.1fr_auto] md:items-center md:gap-8">
+            <span class="font-display text-2xl font-bold text-rust">04</span>
+            <h3 class="font-display text-4xl font-black uppercase leading-none sm:text-5xl"><a class="hover:text-machine" href="services/civil-works.html">Civil works</a></h3>
+            <p class="max-w-lg leading-7 opacity-75">Road and bridge works, land clearing, site preparation, drainage and general civil engineering support.</p>
+            <a href="services/civil-works.html" class="service-icon flex h-12 w-12 items-center justify-center border border-current" aria-label="Open civil works service page"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="equipment" class="yellow-cut diagonal-grid py-20 text-asphalt sm:py-28" aria-labelledby="equipment-title">
+      <div class="section-shell">
+        <div class="grid gap-8 lg:grid-cols-[1.2fr_.8fr] lg:items-end">
+          <div>
+            <p class="font-display text-2xl font-bold">Equipment roster</p>
+            <h2 id="equipment-title" class="mt-3 font-display text-6xl font-black uppercase leading-[.88] tracking-[-.035em] sm:text-8xl">Ready when the site is.</h2>
+          </div>
+          <div class="lg:pb-2">
+            <p class="max-w-xl text-lg leading-8">Call for current availability and a quote based on the machine, duration, operator needs and project location.</p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="tel:+17587198180" class="inline-flex min-h-12 items-center justify-center gap-2 bg-asphalt px-5 font-bold text-white transition-colors hover:bg-harbor"><i class="fa-solid fa-phone" aria-hidden="true"></i> 719-8180</a>
+              <a href="tel:+17587328142" class="inline-flex min-h-12 items-center justify-center gap-2 border-2 border-asphalt px-5 font-bold text-asphalt transition-colors hover:bg-asphalt hover:text-white"><i class="fa-solid fa-phone" aria-hidden="true"></i> 732-8142</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-12" aria-label="Equipment available for rent">
+          <article class="overflow-hidden border-2 border-asphalt bg-white lg:col-span-7">
+            <img class="aspect-[16/9] w-full object-cover" src="https://images.pexels.com/photos/14452156/pexels-photo-14452156.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1100" srcset="https://images.pexels.com/photos/14452156/pexels-photo-14452156.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=560 560w, https://images.pexels.com/photos/14452156/pexels-photo-14452156.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1100 1100w" sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 58vw" width="1100" height="619" loading="lazy" alt="Large yellow excavator on a construction site">
+            <div class="grid gap-3 border-t-2 border-asphalt p-5 sm:grid-cols-[1fr_auto] sm:items-end sm:p-6">
+              <div><h3 class="font-display text-4xl font-black uppercase leading-none">Excavators</h3><p class="mt-2 text-sm leading-6 text-slate-600">Large and small machines for digging, clearing and site preparation.</p></div>
+              <span class="font-display text-xl font-bold text-rust">Large + small</span>
+            </div>
+          </article>
+
+          <article class="overflow-hidden border-2 border-asphalt bg-white lg:col-span-5">
+            <img class="aspect-[16/9] w-full object-cover" src="https://images.pexels.com/photos/27986722/pexels-photo-27986722/free-photo-of-a-yellow-road-roller-sitting-on-top-of-dirt.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" srcset="https://images.pexels.com/photos/27986722/pexels-photo-27986722/free-photo-of-a-yellow-road-roller-sitting-on-top-of-dirt.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=480 480w, https://images.pexels.com/photos/27986722/pexels-photo-27986722/free-photo-of-a-yellow-road-roller-sitting-on-top-of-dirt.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900 900w" sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 42vw" width="900" height="506" loading="lazy" alt="Yellow road roller on a compacted dirt surface">
+            <div class="grid gap-3 border-t-2 border-asphalt p-5 sm:grid-cols-[1fr_auto] sm:items-end sm:p-6">
+              <div><h3 class="font-display text-4xl font-black uppercase leading-none">Mini roller</h3><p class="mt-2 text-sm leading-6 text-slate-600">Compact double-drum roller for controlled compaction work.</p></div>
+              <span class="font-display text-xl font-bold text-rust">Double drum</span>
+            </div>
+          </article>
+
+          <article class="overflow-hidden border-2 border-asphalt bg-white lg:col-span-5">
+            <img class="aspect-[16/9] w-full object-cover" src="https://images.pexels.com/photos/14475776/pexels-photo-14475776.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" srcset="https://images.pexels.com/photos/14475776/pexels-photo-14475776.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=480 480w, https://images.pexels.com/photos/14475776/pexels-photo-14475776.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900 900w" sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 42vw" width="900" height="588" loading="lazy" alt="Heavy-duty yellow dump truck at a construction site">
+            <div class="grid gap-3 border-t-2 border-asphalt p-5 sm:grid-cols-[1fr_auto] sm:items-end sm:p-6">
+              <div><h3 class="font-display text-4xl font-black uppercase leading-none">Truck</h3><p class="mt-2 text-sm leading-6 text-slate-600">Heavy hauling for aggregate, spoil and construction materials.</p></div>
+              <span class="font-display text-xl font-bold text-rust">20 ton</span>
+            </div>
+          </article>
+
+          <article class="overflow-hidden border-2 border-asphalt bg-white lg:col-span-7">
+            <img class="aspect-[16/9] w-full object-cover" src="https://images.pexels.com/photos/38095094/pexels-photo-38095094/free-photo-of-yellow-construction-vehicle-on-flatbed-trailer.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1100" srcset="https://images.pexels.com/photos/38095094/pexels-photo-38095094/free-photo-of-yellow-construction-vehicle-on-flatbed-trailer.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=560 560w, https://images.pexels.com/photos/38095094/pexels-photo-38095094/free-photo-of-yellow-construction-vehicle-on-flatbed-trailer.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1100 1100w" sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 58vw" width="1100" height="685" loading="lazy" alt="Construction equipment secured on a flatbed transport trailer">
+            <div class="grid gap-3 border-t-2 border-asphalt p-5 sm:grid-cols-[1fr_auto] sm:items-end sm:p-6">
+              <div><h3 class="font-display text-4xl font-black uppercase leading-none">Lowboy</h3><p class="mt-2 text-sm leading-6 text-slate-600">Trailer head and lowboy for moving heavy machinery between sites.</p></div>
+              <span class="font-display text-xl font-bold text-rust">Trailer head</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="mt-5 border-l-4 border-asphalt bg-white p-4 text-sm leading-6"><i class="fa-solid fa-circle-info mr-2 text-rust" aria-hidden="true"></i> Images are representative while the final fleet photography and specifications are being confirmed.</p>
+      </div>
+    </section>
+
+    <section class="bg-asphalt py-20 text-white sm:py-28" aria-labelledby="process-title">
+      <div class="section-shell topo-lines">
+        <div class="grid gap-8 lg:grid-cols-[.75fr_1.25fr]">
+          <h2 id="process-title" class="balanced font-display text-5xl font-black uppercase leading-[.94] tracking-[-.02em] sm:text-7xl">A clear path from call to site.</h2>
+          <ol class="border-t border-white/25 lg:border-l lg:border-t-0">
+            <li class="grid gap-3 border-b border-white/25 py-8 lg:grid-cols-[4.5rem_1fr] lg:px-10">
+              <span class="font-display text-3xl font-bold text-machine">01</span>
+              <div><h3 class="font-display text-3xl font-black uppercase">Discuss the work</h3><p class="mt-2 max-w-xl leading-7 text-white/70">Tell us the site, timing, access and the machine or support you need.</p></div>
+            </li>
+            <li class="grid gap-3 border-b border-white/25 py-8 lg:grid-cols-[4.5rem_1fr] lg:px-10">
+              <span class="font-display text-3xl font-bold text-machine">02</span>
+              <div><h3 class="font-display text-3xl font-black uppercase">Confirm the plan</h3><p class="mt-2 max-w-xl leading-7 text-white/70">We confirm availability, practical requirements and a call-for-quote price.</p></div>
+            </li>
+            <li class="grid gap-3 py-8 lg:grid-cols-[4.5rem_1fr] lg:px-10">
+              <span class="font-display text-3xl font-bold text-machine">03</span>
+              <div><h3 class="font-display text-3xl font-black uppercase">Get to work</h3><p class="mt-2 max-w-xl leading-7 text-white/70">Equipment, transport or civil works support arrives according to the agreed schedule.</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="bg-white py-20 sm:py-28" aria-labelledby="projects-title">
+      <div class="section-shell">
+        <div class="grid gap-8 md:grid-cols-[1fr_.8fr] md:items-end">
+          <h2 id="projects-title" class="font-display text-6xl font-black uppercase leading-[.9] tracking-[-.03em] text-asphalt sm:text-8xl">Work in the field</h2>
+          <p class="max-w-lg leading-7 text-slate-600 md:justify-self-end">This gallery is ready to grow with real project photography. The first images are representative placeholders.</p>
+        </div>
+
+        <div class="mt-12 grid auto-rows-[15rem] gap-3 sm:grid-cols-2 sm:auto-rows-[19rem] lg:grid-cols-12">
+          <figure class="gallery-photo photo-one relative overflow-hidden sm:row-span-2 lg:col-span-7">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-asphalt/90 p-5 text-white"><span class="font-display text-2xl font-bold uppercase">Earthmoving &amp; site work</span><span class="mt-1 block text-xs text-white/65">Representative image</span></figcaption>
+          </figure>
+          <figure class="gallery-photo photo-two relative overflow-hidden lg:col-span-5">
+            <figcaption class="absolute inset-x-0 bottom-0 bg-asphalt/90 p-5 text-white"><span class="font-display text-2xl font-bold uppercase">Equipment in action</span><span class="mt-1 block text-xs text-white/65">Representative image</span></figcaption>
+          </figure>
+          <div class="flex flex-col justify-between border-2 border-dashed border-asphalt/35 bg-concrete p-6 text-asphalt lg:col-span-3" aria-label="Placeholder for a future roadworks project photo">
+            <i class="fa-solid fa-road text-3xl text-rust" aria-hidden="true"></i>
+            <div><p class="font-display text-2xl font-black uppercase">Roadworks</p><p class="mt-1 text-sm text-slate-600">Project photo slot</p></div>
+          </div>
+          <div class="flex flex-col justify-between border-2 border-dashed border-asphalt/35 bg-chalk p-6 text-asphalt lg:col-span-2" aria-label="Placeholder for a future bridge works project photo">
+            <i class="fa-solid fa-bridge text-3xl text-rust" aria-hidden="true"></i>
+            <div><p class="font-display text-2xl font-black uppercase">Bridge works</p><p class="mt-1 text-sm text-slate-600">Photo slot</p></div>
+          </div>
+        </div>
+        <div class="mt-10 flex justify-start md:justify-end">
+          <a href="gallery.html" class="inline-flex min-h-14 items-center justify-center gap-3 bg-asphalt px-7 font-bold text-white transition-colors hover:bg-harbor active:bg-black">See full gallery <i class="fa-solid fa-images" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-concrete py-20 sm:py-28" aria-labelledby="contact-title">
+      <div class="section-shell grid gap-12 lg:grid-cols-[.82fr_1.18fr] lg:gap-20">
+        <div>
+          <h2 id="contact-title" class="balanced font-display text-6xl font-black uppercase leading-[.88] tracking-[-.03em] text-asphalt sm:text-8xl">Put the job in motion.</h2>
+          <p class="mt-8 max-w-md text-lg leading-8 text-slate-700">A direct call is the fastest way to confirm what you need, where you need it and when.</p>
+          <div class="mt-8 grid gap-3" aria-label="Business phone numbers">
+            <a href="tel:+17587198180" class="inline-flex w-fit items-center gap-4 font-display text-4xl font-black text-asphalt transition-colors hover:text-rust sm:text-5xl"><i class="fa-solid fa-phone text-machine" aria-hidden="true"></i> (758) 719-8180</a>
+            <a href="tel:+17587328142" class="inline-flex w-fit items-center gap-4 font-display text-4xl font-black text-asphalt transition-colors hover:text-rust sm:text-5xl"><i class="fa-solid fa-phone text-machine" aria-hidden="true"></i> (758) 732-8142</a>
+          </div>
+          <dl class="mt-10 grid gap-5 border-t border-asphalt/25 pt-7 text-sm">
+            <div class="grid grid-cols-[6rem_1fr] gap-4"><dt class="font-bold text-asphalt">Base</dt><dd>Dennery, Saint Lucia, W.I.</dd></div>
+            <div class="grid grid-cols-[6rem_1fr] gap-4"><dt class="font-bold text-asphalt">Service</dt><dd>Island-wide</dd></div>
+            <div class="grid grid-cols-[6rem_1fr] gap-4"><dt class="font-bold text-asphalt">Quotes</dt><dd>Call to discuss scope and availability</dd></div>
+          </dl>
+        </div>
+
+        <div class="bg-white p-6 sm:p-10">
+          <div class="mb-8 flex items-start justify-between gap-6 border-b border-asphalt/20 pb-6">
+            <div><h3 class="font-display text-4xl font-black uppercase text-asphalt">Prepare your request</h3><p class="mt-2 max-w-xl text-sm leading-6 text-slate-600">Review your details, copy the summary, then call Benjamin. This form does not send online yet.</p></div>
+            <i class="fa-solid fa-clipboard-list hidden text-3xl text-machine sm:block" aria-hidden="true"></i>
+          </div>
+
+          <form id="quoteForm" novalidate>
+            <div id="errorSummary" class="mb-6 hidden border-l-4 border-red-700 bg-red-50 p-4 text-sm text-red-900" role="alert" tabindex="-1"></div>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label class="mb-2 block text-sm font-bold text-asphalt" for="name">Your name <span aria-hidden="true">*</span></label>
+                <input class="form-control" id="name" name="name" type="text" autocomplete="name" required aria-describedby="nameError">
+                <p id="nameError" class="field-error" aria-live="polite"></p>
+              </div>
+              <div>
+                <label class="mb-2 block text-sm font-bold text-asphalt" for="phone">Phone number <span aria-hidden="true">*</span></label>
+                <input class="form-control" id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="phoneError">
+                <p id="phoneError" class="field-error" aria-live="polite"></p>
+              </div>
+            </div>
+            <div class="mt-1">
+              <label class="mb-2 block text-sm font-bold text-asphalt" for="service">Service needed <span aria-hidden="true">*</span></label>
+              <select class="form-control" id="service" name="service" required aria-describedby="serviceError">
+                <option value="">Choose a service</option>
+                <option>Equipment rental</option>
+                <option>Trucking services</option>
+                <option>Heavy machinery moving</option>
+                <option>Civil works</option>
+              </select>
+              <p id="serviceError" class="field-error" aria-live="polite"></p>
+            </div>
+            <div class="mt-1">
+              <label class="mb-2 block text-sm font-bold text-asphalt" for="location">Project location</label>
+              <input class="form-control" id="location" name="location" type="text" autocomplete="street-address" placeholder="Town or community">
+            </div>
+            <div class="mt-5">
+              <label class="mb-2 block text-sm font-bold text-asphalt" for="details">What does the job involve? <span aria-hidden="true">*</span></label>
+              <textarea class="form-control min-h-32 resize-y" id="details" name="details" required aria-describedby="detailsError" placeholder="Machine, material, timing, access or site details"></textarea>
+              <p id="detailsError" class="field-error" aria-live="polite"></p>
+            </div>
+            <button class="mt-2 inline-flex min-h-14 w-full cursor-pointer items-center justify-center gap-3 bg-asphalt px-7 font-bold text-white transition-colors hover:bg-harbor active:bg-black sm:w-auto" type="submit">Review quote details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+          </form>
+
+          <div id="quoteResult" class="hidden" tabindex="-1">
+            <div class="border-l-8 border-machine bg-concrete p-5">
+              <p class="font-display text-3xl font-black uppercase text-asphalt">Your call notes are ready</p>
+              <pre id="quoteSummary" class="mt-4 whitespace-pre-wrap font-sans text-sm leading-6 text-slate-700"></pre>
+            </div>
+            <div id="copyStatus" class="mt-3 min-h-6 text-sm font-semibold text-harbor" aria-live="polite"></div>
+            <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+              <button id="copyButton" type="button" class="inline-flex min-h-12 cursor-pointer items-center justify-center gap-2 border-2 border-asphalt px-5 font-bold text-asphalt transition-colors hover:bg-asphalt hover:text-white"><i class="fa-solid fa-copy" aria-hidden="true"></i> Copy details</button>
+              <a href="tel:+17587198180" class="inline-flex min-h-12 items-center justify-center gap-2 bg-machine px-5 font-bold text-asphalt transition-colors hover:bg-stripe"><i class="fa-solid fa-phone" aria-hidden="true"></i> Call Benjamin</a>
+              <button id="editButton" type="button" class="inline-flex min-h-12 cursor-pointer items-center justify-center px-5 font-bold text-asphalt underline decoration-2 underline-offset-4">Edit details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-machine py-12 text-asphalt" aria-label="Call to action">
+      <div class="section-shell flex flex-col gap-7 xl:flex-row xl:items-center xl:justify-between">
+        <p class="font-display text-4xl font-black uppercase leading-none sm:text-5xl">Equipment. Transport. Civil works.</p>
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <a href="tel:+17587198180" class="inline-flex min-h-14 shrink-0 items-center justify-center gap-3 bg-asphalt px-7 font-bold text-white transition-colors hover:bg-harbor"><i class="fa-solid fa-phone" aria-hidden="true"></i> (758) 719-8180</a>
+          <a href="tel:+17587328142" class="inline-flex min-h-14 shrink-0 items-center justify-center gap-3 border-2 border-asphalt px-7 font-bold text-asphalt transition-colors hover:bg-asphalt hover:text-white"><i class="fa-solid fa-phone" aria-hidden="true"></i> (758) 732-8142</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-asphalt py-14 text-white">
+    <div class="section-shell grid gap-10 md:grid-cols-[1.2fr_.8fr_.8fr]">
+      <div>
+        <div class="flex items-center gap-3">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="font-display text-2xl font-black leading-none">BENJAMIN JAMES</span>
+        </div>
+        <p class="mt-5 max-w-sm text-sm leading-6 text-white/65">Construction and equipment rental for practical, heavy-duty work across Saint Lucia.</p>
+      </div>
+      <div>
+        <h2 class="font-display text-xl font-bold uppercase text-machine">Navigate</h2>
+        <nav class="mt-4 grid gap-3 text-sm" aria-label="Footer navigation">
+          <a class="w-fit text-white/75 hover:text-white" href="#about">About</a>
+          <a class="w-fit text-white/75 hover:text-white" href="#services">Services</a>
+          <a class="w-fit text-white/75 hover:text-white" href="#equipment">Equipment</a>
+          <a class="w-fit text-white/75 hover:text-white" href="gallery.html">Gallery</a>
+        </nav>
+      </div>
+      <div>
+        <h2 class="font-display text-xl font-bold uppercase text-machine">Contact</h2>
+        <div class="mt-4 grid gap-3 text-sm text-white/75">
+          <a class="w-fit hover:text-white" href="tel:+17587198180">(758) 719-8180</a>
+          <a class="w-fit hover:text-white" href="tel:+17587328142">(758) 732-8142</a>
+          <p>Dennery, Saint Lucia, W.I.</p>
+          <p>Island-wide service</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-shell mt-12 flex flex-col gap-3 border-t border-white/15 pt-6 text-xs text-white/50 sm:flex-row sm:justify-between">
+      <p>&copy; <span id="year"></span> Benjamin James Construction &amp; Equipment Rental.</p>
+      <p>Built for Saint Lucia.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    function setMenu(open) {
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      mobileMenu.classList.toggle('hidden', !open);
+      mobileMenu.setAttribute('aria-hidden', String(!open));
+      menuIcon.className = `fa-solid ${open ? 'fa-xmark' : 'fa-bars'} text-xl`;
+      document.body.classList.toggle('menu-open', open);
+      if (open) mobileMenu.querySelector('a').focus();
+    }
+
+    menuButton.addEventListener('click', () => setMenu(menuButton.getAttribute('aria-expanded') !== 'true'));
+    document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+        setMenu(false);
+        menuButton.focus();
+      }
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024 && menuButton.getAttribute('aria-expanded') === 'true') setMenu(false);
+    });
+
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        document.querySelectorAll('.nav-link').forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+      });
+    }, { rootMargin: '-25% 0px -65% 0px' });
+    document.querySelectorAll('main section[id]').forEach(section => sectionObserver.observe(section));
+
+    const quoteForm = document.getElementById('quoteForm');
+    const quoteResult = document.getElementById('quoteResult');
+    const quoteSummary = document.getElementById('quoteSummary');
+    const errorSummary = document.getElementById('errorSummary');
+    const copyStatus = document.getElementById('copyStatus');
+    const requiredFields = ['name', 'phone', 'service', 'details'];
+
+    const messages = {
+      name: 'Enter your name.',
+      phone: 'Enter a phone number.',
+      service: 'Choose the service you need.',
+      details: 'Add a short description of the work.'
+    };
+
+    function validateField(field) {
+      const valid = field.value.trim() !== '';
+      field.setAttribute('aria-invalid', String(!valid));
+      document.getElementById(`${field.id}Error`).textContent = valid ? '' : messages[field.id];
+      return valid;
+    }
+
+    requiredFields.forEach(id => {
+      document.getElementById(id).addEventListener('blur', event => validateField(event.currentTarget));
+    });
+
+    quoteForm.addEventListener('submit', event => {
+      event.preventDefault();
+      const invalid = requiredFields.map(id => document.getElementById(id)).filter(field => !validateField(field));
+      if (invalid.length) {
+        errorSummary.innerHTML = `<strong>Check ${invalid.length === 1 ? 'this field' : 'these fields'}:</strong><ul class="mt-2 list-disc pl-5">${invalid.map(field => `<li><a class="underline" href="#${field.id}">${messages[field.id]}</a></li>`).join('')}</ul>`;
+        errorSummary.classList.remove('hidden');
+        errorSummary.focus();
+        return;
+      }
+
+      errorSummary.classList.add('hidden');
+      const data = new FormData(quoteForm);
+      quoteSummary.textContent = [
+        `Name: ${data.get('name')}`,
+        `Phone: ${data.get('phone')}`,
+        `Service: ${data.get('service')}`,
+        `Location: ${data.get('location') || 'To be confirmed'}`,
+        `Job details: ${data.get('details')}`
+      ].join('\n');
+      quoteForm.classList.add('hidden');
+      quoteResult.classList.remove('hidden');
+      quoteResult.focus();
+    });
+
+    document.getElementById('copyButton').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(quoteSummary.textContent);
+        copyStatus.textContent = 'Details copied. You can paste them into your notes.';
+      } catch (error) {
+        copyStatus.textContent = 'Select the summary above and copy it manually.';
+      }
+    });
+
+    document.getElementById('editButton').addEventListener('click', () => {
+      quoteResult.classList.add('hidden');
+      quoteForm.classList.remove('hidden');
+      document.getElementById('name').focus();
+      copyStatus.textContent = '';
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
